@@ -1,0 +1,32 @@
+body{
+    background: #AA4847;
+}
+
+.clear_fix_space {
+    padding-top: 50px; 
+    }
+    .navbar-header{
+        padding-left:200px;
+    }
+    .navbar-brand{
+        font-size:27px;
+        font-weight: bold;
+    }
+    .thumbnail{
+        margin:10px 40px;
+    }
+    img{
+        display: inline-block;
+        padding:5px;
+        border:1px solid #eee;
+        background: #fff;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    }
+    /* img{
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    } */
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%
+    }
