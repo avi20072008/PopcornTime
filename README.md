@@ -16,6 +16,8 @@ b) It works asynchonously. It gives seemless navigation experience.
 
 c) For performance gain and save server resources, API data is stored in 
 a localStorage and the same localStorage is used for future data retrieval.
+
+d) Total code size is less than 5KB
  
 How to run? 
 
