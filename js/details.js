@@ -10,6 +10,16 @@ $(function(){
         formatMovieDetails(JSON.parse(objMovieData));
 
     } else{
+        
+         var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://api.themoviedb.org/3/movie/popular?page=1&language=en-US&api_key=52a9401c887cdd3822ea8e97448861b7",
+            "method": "GET",
+            "headers": {},
+            "data": "{}"
+        }
+        
         $.ajax(settings).done(function (response) {
             if(response != null )
             {
