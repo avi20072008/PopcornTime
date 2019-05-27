@@ -3,15 +3,15 @@ $(function(){
     let base_secure_url = "https://image.tmdb.org/t/p/w500";
     let movieId = getParameterByName('id');
 
+    localStorage.clear();
     // Load existing data. 
     if(localStorage.getItem('apiMovieData'))
     {
         objMovieData = localStorage.getItem('apiMovieData');
         formatMovieDetails(JSON.parse(objMovieData));
-
     } else{
-        
-         var settings = {
+
+        var settings = {
             "async": true,
             "crossDomain": true,
             "url": "https://api.themoviedb.org/3/movie/popular?page=1&language=en-US&api_key=52a9401c887cdd3822ea8e97448861b7",
@@ -19,7 +19,6 @@ $(function(){
             "headers": {},
             "data": "{}"
         }
-        
         $.ajax(settings).done(function (response) {
             if(response != null )
             {
@@ -28,9 +27,10 @@ $(function(){
                 formatMovieDetails(tempObj);
             }
         });
-    }
+    } // end of else-if.
 
     function formatMovieDetails(objMovie){
+        
         for (let i = 0; i < objMovie.length; i++) 
         {
             if(movieId == objMovie[i]['id'])
@@ -87,7 +87,8 @@ $(function(){
             str = str + '<div class="author"> ' +  objReviewData[i]["author"] + ' says :</div>';
             str += '<div class="review">' +  objReviewData[i]["content"] + '</div></div>';
         }
-        $(".movieReviews").prepend(str);
-        
+        //$(".movieReviews").prepend(str);
+        var mvReview = document.getElementsByClassName("movieReviews")[0];
+        mvReview.innerHTML = str;
     }
 });
