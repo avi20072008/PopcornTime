@@ -9,16 +9,16 @@ TMDB API.
 
 Features:
  
-a) Whole functionality is written in pure front end technologies such as 
+a) Responsive design to accomodate all types of screens. 
+
+b) Whole functionality is written in pure front end technologies such as 
 HTML/CSS and Javacript library. No backend or database is used.
 
-b) It works asynchonously. It gives seemless navigation experience.
+c) It works asynchonously. It gives seemless navigation experience.
 
-c) For performance gain and save server resources, API data is stored in 
+d) For performance gain and save server resources, API data is stored in 
 a localStorage and the same localStorage is used for future data retrieval.
 
-d) Total code size is less than 5KB
- 
 How to run? 
 
 Clone the project on your machine and run index.html file.
